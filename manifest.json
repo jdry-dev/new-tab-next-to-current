@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "New Tab Next To Current",
+  "version": "1.0.0",
+  "description": "Opens new tabs (Ctrl+T) right next to the currently active tab instead of at the end of the tab strip.",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
