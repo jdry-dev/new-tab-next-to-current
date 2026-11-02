@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1280px; height: 800px; overflow: hidden; }
+  body { background: #f1f3f4; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #202124;
+         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; }
+  h1 { font-size: 40px; font-weight: 600; letter-spacing: -0.5px; }
+  h1 kbd { font: inherit; background: #fff; border: 2px solid #dadce0; border-bottom-width: 5px; border-radius: 10px; padding: 0 14px; }
+  .row { width: 1080px; }
+  .label { font-size: 22px; font-weight: 600; margin-bottom: 12px; display: flex; gap: 10px; align-items: center; }
+  .label.bad { color: #b3261e; } .label.good { color: #137333; }
+  .strip { background: #dee1e6; border-radius: 14px 14px 0 0; padding: 10px 12px 0; display: flex; gap: 4px; }
+  .tab { flex: 0 0 162px; height: 44px; border-radius: 10px 10px 0 0; background: #e8eaed; display: flex; align-items: center;
+         padding: 0 14px; gap: 10px; font-size: 17px; color: #5f6368; white-space: nowrap; overflow: hidden; }
+  .tab i { width: 16px; height: 16px; border-radius: 50%; background: #9aa0a6; flex: none; }
+  .tab.new { background: #fff; color: #1a73e8; outline: 3px solid #1a73e8; outline-offset: -3px; font-weight: 600; }
+  .tab.new i { background: #1a73e8; }
+  .page { background: #fff; height: 70px; border-radius: 0 0 14px 14px; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+  .gap { flex: 1; }
+</style></head><body>
+  <h1>Press <kbd>Ctrl</kbd> + <kbd>T</kbd> and the new tab opens right where you are</h1>
+  <div class="row">
+    <div class="label bad">✕ Without the extension: new tab lands at the far end</div>
+    <div class="strip">
+      <div class="tab"><i></i>Inbox</div><div class="tab"><i></i>Docs – Report</div>
+      <div class="tab"><i></i>Calendar</div><div class="tab"><i></i>Issue #142</div><div class="tab"><i></i>Wiki</div>
+      <div class="tab new"><i></i>New Tab</div>
+    </div><div class="page"></div>
+  </div>
+  <div class="row">
+    <div class="label good">✓ With New Tab Next To Current: it opens beside the active tab</div>
+    <div class="strip">
+      <div class="tab"><i></i>Inbox</div><div class="tab"><i></i>Docs – Report</div>
+      <div class="tab new"><i></i>New Tab</div>
+      <div class="tab"><i></i>Calendar</div><div class="tab"><i></i>Issue #142</div><div class="tab"><i></i>Wiki</div>
+    </div><div class="page"></div>
+  </div>
+</body></html>
